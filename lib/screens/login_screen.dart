@@ -1,3 +1,4 @@
+import 'package:aaaaa/screens/sign_up_screen.dart';
 import 'package:aaaaa/values/custom_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -8,9 +9,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  Color topColor = Colors.blue;
-  Color bottomColor = const Color.fromARGB(255, 120, 212, 233);
-
   bool? continueConnected = false;
 
   @override
@@ -27,8 +25,8 @@ class _LoginScreenState extends State<LoginScreen> {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              topColor,
-              bottomColor,
+              CustomColors().getgradientSecondaryColor(),
+              CustomColors().getgradientMainColor(),
             ],
           ),
         ),
@@ -39,11 +37,11 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(
-                  bottom: 15,
+                  bottom: 10,
                 ),
                 child: Image.asset(
                   "assets/academia.png",
-                  height: 125,
+                  height: 170,
                 ),
               ),
               const Text(
@@ -51,8 +49,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
+                  fontSize: 28,
+                  fontWeight: FontWeight.w500,
                 ),
               ),
               Form(
@@ -64,7 +62,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         labelText: "E-mail",
                         labelStyle: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 19,
                         ),
                         prefixIcon: Icon(
                           Icons.mail_outline,
@@ -87,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         labelText: "Senha",
                         labelStyle: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 19,
                         ),
                         prefixIcon: Icon(
                           Icons.key,
@@ -121,7 +119,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   textAlign: TextAlign.right,
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 14,
+                    fontSize: 16,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
@@ -141,7 +139,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     "Continuar conectado?",
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 18,
+                      fontSize: 19,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -152,50 +150,59 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: const Text(
                   "Login",
                   style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
+                    color: Colors.black,
+                    fontSize: 17,
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
-                  primary: CustomColors().getActivePrimaryButtonColor(),
+                  primary: CustomColors().getActiveSecondaryButton(),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(40),
                   ),
+                  minimumSize: Size(double.infinity, 40),
                 ),
               ),
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 10),
                 child: Divider(
-                  color: Colors.white,
+                  color: Color.fromARGB(255, 255, 255, 255),
                 ),
               ),
               const SizedBox(
-                height: 30,
+                height: 40,
                 child: Center(
                   child: Text(
                     "Ainda não é cadastrado?",
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 14,
+                      fontSize: 16,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SignUpScreen(),
+                    ),
+                  );
+                },
                 child: const Text(
                   "Cadastre-se",
                   style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
+                    color: Colors.black,
+                    fontSize: 17,
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
-                  primary: CustomColors().getActivePrimaryButtonColor(),
+                  primary: CustomColors().getActiveSecondaryButton(),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(40),
                   ),
+                  minimumSize: Size(double.infinity, 40),
                 ),
               ),
             ],
