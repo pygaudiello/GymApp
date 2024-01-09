@@ -1,16 +1,7 @@
-# aaaaa
+# GymApp
 
-A new Flutter project.
+Estou fazendo um aplicativo de academia em Flutter, e estou aprendendo tudo com o Dotcode.
 
-## Getting Started
+## Imagem Atual
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![image](https://github.com/pygaudiello/GymApp/assets/126681785/949f9467-661e-4c3d-b6c9-fe9ad17bef5a)
